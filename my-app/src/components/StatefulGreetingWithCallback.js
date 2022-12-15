@@ -1,9 +1,10 @@
 import React from "react";
 
 // This is the correct way to create the class
-class StatefulGreetingTwo extends React.Component {
+class StatefulGreetingWithCallBack extends React.Component {
     // The constructor is usually where state is defined in class components
     // it is best practice to always pass props to the constructor() and super()
+    // You can not add a state to a class component without creating a constructor()
     constructor(props) {
         super(props);
         // as soon as its instantiated that we can access and manipulate as required
@@ -18,6 +19,7 @@ class StatefulGreetingTwo extends React.Component {
     handleClick() {
         // You need to write this syntax to successfully update the state, or you will get errors
         this.setState({
+        // setState() is asynchronous and runs in the background, to update the values as well as the UI at the same time you need to create a callback function as a 2nd parameter
             // We are replacing this from the this.state = {
                 // =====================
                 // introduction: "Hello",
@@ -26,9 +28,14 @@ class StatefulGreetingTwo extends React.Component {
             // }
             introduction: "Goodbye!",
             buttonText: "Enter!",
+        }, () => {
+            // To Update the values at the same time 
+            console.log('new state:',this.state.introduction)
+            console.log('new state:',this.state.buttonText)
         });
-        console.log(this.state.introduction)
-        console.log(this.state.buttonText)
+        // Anything outside of setState() will render the old values
+        console.log('old state:',this.state.introduction)
+        console.log('old state',this.state.buttonText)
     }
 
     render() {
@@ -41,4 +48,4 @@ class StatefulGreetingTwo extends React.Component {
     };
 };
 
-export default StatefulGreetingTwo;
+export default StatefulGreetingWithCallBack;
