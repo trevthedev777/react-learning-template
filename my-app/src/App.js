@@ -5,6 +5,9 @@ import HooksCounter from './components/HooksCounter';
 import StatefulGreetingTwo from './components/StatefulGreetingWithCallback';
 import StatefulGreetingWithCallBack from './components/StatefulGreetingWithCallback';
 import StatefulGreetingWithCallbackWithPrevState from './components/StatefulGreetingWithCallbackWithPrevState.js';
+// Events
+import EventsClasses from './components/EventsClasses';
+import EventsFunctional from './components/EventsFunctional';
 
 function App() {
   return (
@@ -14,7 +17,9 @@ function App() {
       {/* <HooksCounter name="Mike" /> */}
       {/* <StatefulGreetingTwo greeting="This is a message from the class component"/> */}
       {/* <StatefulGreetingWithCallBack /> */}
-      <StatefulGreetingWithCallbackWithPrevState />
+      {/* <StatefulGreetingWithCallbackWithPrevState /> */}
+      <EventsFunctional />
+      <EventsClasses />
     </div>
   );
 }
