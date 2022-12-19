@@ -8,19 +8,28 @@ class MethodsAsPropsParent extends Component  {
             isLoggedIn: false,
         };
     };
+    
     // name the handlers appropriately to their functionality
     handleSignIn = () => {
         this.setState({
             isLoggedIn: true
         })
-        console.log(this)
-    }
+        console.log(this);
+    };
+
     handleSignOut = () => {
         this.setState({
             isLoggedIn: false
         })
-        console.log(this)
-    }
+        console.log(this);
+    };
+
+    toggleIsLoggedIn = () => {
+        this.setState((prevState) => ({
+            isLoggedIn: !prevState.isLoggedIn,
+        }));
+    };
+
     render() {
         return (
             <div>
