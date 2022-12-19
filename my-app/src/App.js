@@ -1,10 +1,11 @@
 import './App.css';
-import NestingComponent from './components/NestingComponent';
+import MethodsAsPropsParent from './components/MethodsAsPropsParent';
+
 
 function App() {
   return (
     <div className="App">
-        <NestingComponent />
+      <MethodsAsPropsParent />
     </div>
   );
 }

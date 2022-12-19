@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import UserMessage from './UserMessage'
-import UserData from './UserData'
+import React, { Component } from 'react';
+import UserMessage from './UserMessage';
+import UserData from './UserData';
 
 export class NestingComponent extends Component {
   constructor(props) {
@@ -8,8 +8,8 @@ export class NestingComponent extends Component {
      this.state = {
        isloaded: true,
        isloggedin: true
-    }
-  }
+    };
+  };
   
   render() {
     return (
@@ -18,7 +18,7 @@ export class NestingComponent extends Component {
         <UserMessage isloggedin={this.state.isloggedin}/>
       </div>
     )
-  }
-}
+  };
+};
 
-export default NestingComponent
+export default NestingComponent;
