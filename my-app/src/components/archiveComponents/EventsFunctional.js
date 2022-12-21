@@ -1,14 +1,12 @@
 import React from 'react'
 
 function EventsFunctional() {
-    // the even function must be inside the component for it to work
     function clickHandler() {
-    console.log('Clicked the functional component')
+        console.log('Clicked the functional Button')
     }
   return (
     <div>
-        {/* Dont use () when passing the even handler in React */}
-        <button onClick={clickHandler}>click me - functional component</button>
+      <button onClick={clickHandler}>Click me : I'm a functional component</button>
     </div>
   )
 }
