@@ -1,14 +1,12 @@
 import './App.css';
-import FunctionalGreeting from './components/FunctionalGreeting';
-import StatefulGreeting from './components/StatefulGreeting';
-import HooksCounter from './components/HooksCounter';
+// import RenderingLists from './components/RenderingLists';
+import RenderingNewLists from './components/RenderingNewLists';
 
 function App() {
   return (
     <div className="App">
-      {/* <FunctionalGreeting name="Trevor" /> */}
-      {/* <StatefulGreeting name="Trevor You Poes" /> */}
-      <HooksCounter name="Mike" />
+      {/* <RenderingLists /> */}
+      <RenderingNewLists />
     </div>
   );
 }
